@@ -21,7 +21,7 @@ A full list of the 1000+ Material Design Icons icons is available: [materialdesi
 
 ##Usage Instructions
 
-TTo use any of the Material Design icons on your WordPress site you have two options:
+To use any of the Material Design icons on your WordPress site you have two options:
 
 __HTML__
 
@@ -50,14 +50,14 @@ Amazon icon
 
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 
-3. Use one of the three usage methods (HTML or Shortcode) within the content of your posts or pages.   
+3. Use one of the two usage methods (HTML or Shortcode) within the content of your posts or pages.   
 
 4. Use either the HTML or Shortcode methods inside your text widgets.
 
 
 ##Release Notes
 
-__Version 1.0__
+__Version 0.0.1__
 
 Initial release
 
