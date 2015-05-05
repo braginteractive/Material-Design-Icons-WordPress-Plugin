@@ -6,9 +6,9 @@ Tags: icons, material design, font icon, UI, icon font
 
 Requires at least: 3.0
 
-Tested up to: 4.1.1
+Tested up to: 4.2.1
 
-Stable tag: 0.0.1
+Stable tag: 0.0.2
 
 License: GPLv3 or later
 
@@ -61,6 +61,9 @@ __Version 0.0.1__
 
 Initial release
 
+__Version 0.0.1__
+
+Update to Material Design Icons 1.0.62
 
 
 ##Author
