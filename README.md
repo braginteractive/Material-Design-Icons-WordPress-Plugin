@@ -61,7 +61,7 @@ __Version 0.0.1__
 
 Initial release
 
-__Version 0.0.1__
+__Version 0.0.2__
 
 Update to Material Design Icons 1.0.62
 
