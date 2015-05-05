@@ -1,3 +1,5 @@
+Download this plugin in the WordPress plugin directory [Material Design Icons Plugin](https://wordpress.org/plugins/material-design-icons/)
+
 #Material Design Icons
 
 Contributors: @braginteractive
