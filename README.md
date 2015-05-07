@@ -65,17 +65,18 @@ Hex values will work for the color option and the include size values are: lg, 2
 
 ##Release Notes
 
-__Version 0.0.1__
+__Version 0.0.3__
 
-Initial release
+Added TinyMCE button with size, color, and icon picker
 
 __Version 0.0.2__
 
 Update to Material Design Icons 1.0.62
 
-__Version 0.0.3__
+__Version 0.0.1__
 
-Added TinyMCE button with size, color, and icon picker
+Initial release
+
 
 
 ##Author

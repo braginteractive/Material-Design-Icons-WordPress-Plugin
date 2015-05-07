@@ -80,8 +80,8 @@ class MaterialDesignIcons {
     public function register_plugin_styles() {
         global $wp_styles;
         wp_enqueue_style('material-design-icon-styles', plugins_url('bower_components/mdi/css/materialdesignicons.min.css', __FILE__), array(), self::VERSION, 'all');
-        wp_enqueue_style('material-design-icon-styles-admin', plugins_url('assets/css/admin-styles.css', __FILE__), array(), self::VERSION, 'all');
-        wp_enqueue_style('material-design-icon-styles-size', plugins_url('assets/css/size-styles.css', __FILE__), array(), self::VERSION, 'all');
+        wp_enqueue_style('material-design-icon-styles-admin', plugins_url('css/admin-styles.css', __FILE__), array(), self::VERSION, 'all');
+        wp_enqueue_style('material-design-icon-styles-size', plugins_url('css/size-styles.css', __FILE__), array(), self::VERSION, 'all');
     }
 
     public function setup_shortcode($params) {
@@ -100,7 +100,7 @@ class MaterialDesignIcons {
 
     // Declare script for new button
     public function register_tinymce_plugin( $plugin_array ) {
-        $plugin_array['mdi_icons'] = plugins_url( 'assets/js/mdi-icons.js', __FILE__ );
+        $plugin_array['mdi_icons'] = plugins_url( 'js/mdi-icons.js', __FILE__ );
         return $plugin_array;
     }
 
