@@ -1,0 +1,30 @@
+/**
+ * Material Design Icons admin styles
+ *
+ * @package   Material Design Icons
+ * @author    Brad Williams
+ * @link      https://github.com/braginteractive/Material-Design-Icons-WordPress-Plugin
+ */
+
+/**	
+ * TinyMCE
+ */
+
+/* Override TinyMCE rules blocking these native Font Awesome styles */
+#menu_content_content_bfaSelect_menu .icon-fw,
+#menu_content_content_bfaSelect_menu .mdi-fw,
+.mce-stack-layout-item .icon-fw,
+.mce-stack-layout-item .mdi-fw {
+	display: inline-block;
+	width: 1.2857142857142858em;
+	text-align: center;
+}
+
+/* Override TinyMCE icon font family */
+.mdi {
+	font-family: MaterialDesignIcons !important;
+}
+
+i.mce-i-mdi-icon {
+	background-image: url('mdi-icon.png');
+}

@@ -1,0 +1,33 @@
+/* makes the font 33% larger relative to the icon container */
+.mdi-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.mdi-2x {
+  font-size: 2em;
+}
+.mdi-3x {
+  font-size: 3em;
+}
+.mdi-4x {
+  font-size: 4em;
+}
+.mdi-5x {
+  font-size: 5em;
+}
+.mdi-6x {
+  font-size: 5em;
+}
+.mdi-7x {
+  font-size: 5em;
+}
+.mdi-8x {
+  font-size: 5em;
+}
+.mdi-9x {
+  font-size: 5em;
+}
+.mdi-10x {
+  font-size: 5em;
+}

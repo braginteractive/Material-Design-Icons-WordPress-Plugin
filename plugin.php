@@ -3,7 +3,7 @@
 Plugin Name: Material Design Icons
 Plugin URI: http://braginteractive.com
 Description: Use the Material Design icon set within WordPress. Icons can be inserted using either HTML or a shortcode.
-Version: 0.0.2
+Version: 0.0.3
 Author: Brad Williams
 Author URI: http://braginteractive.com
 Author Email: info@braginteractive.com
@@ -34,7 +34,7 @@ License:
 
 class MaterialDesignIcons {
     private static $instance;
-    const VERSION = '0.0.2';
+    const VERSION = '0.0.3';
 
     private static function has_instance() {
         return isset(self::$instance) && self::$instance != null;
@@ -58,21 +58,56 @@ class MaterialDesignIcons {
 
     public function init() {
         add_action('wp_enqueue_scripts', array(&$this, 'register_plugin_styles'));
+        add_action( 'admin_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
         add_shortcode('mdi-icon', array($this, 'setup_shortcode'));
         add_filter('widget_text', 'do_shortcode');
+        add_action( 'admin_init', array( $this, 'add_tinymce_hooks' ) );
+    }
+
+    public function add_tinymce_hooks() {
+        // check user permissions
+        if ( !current_user_can( 'edit_posts' ) && !current_user_can( 'edit_pages' ) ) {
+            return;
+        }
+        // check if WYSIWYG is enabled
+        if ( 'true' == get_user_option( 'rich_editing' ) ) {
+            add_filter( 'mce_external_plugins', array( $this, 'register_tinymce_plugin' ) );
+            add_filter( 'mce_buttons', array( $this, 'add_tinymce_buttons' ) );
+
+        }
     }
 
     public function register_plugin_styles() {
         global $wp_styles;
         wp_enqueue_style('material-design-icon-styles', plugins_url('bower_components/mdi/css/materialdesignicons.min.css', __FILE__), array(), self::VERSION, 'all');
+        wp_enqueue_style('material-design-icon-styles-admin', plugins_url('assets/css/admin-styles.css', __FILE__), array(), self::VERSION, 'all');
+        wp_enqueue_style('material-design-icon-styles-size', plugins_url('assets/css/size-styles.css', __FILE__), array(), self::VERSION, 'all');
     }
 
     public function setup_shortcode($params) {
         extract(shortcode_atts(array(
                     'name'  => '',
+                    'color'  => '',
+                    'size'  => '',
                 ), $params));
 
-        return '<i class="mdi mdi-'. $params['name'] . '">&nbsp;</i>';
+        
+        $size = $size ? 'mdi-' . $size : '';
+        $color = $color ? 'style="color:' .$color .';' : '';
+
+        return '<i class="mdi mdi-'. $params['name'] . ' ' . $size .'" ' . $color . '">&nbsp;</i>';
+    }
+
+    // Declare script for new button
+    public function register_tinymce_plugin( $plugin_array ) {
+        $plugin_array['mdi_icons'] = plugins_url( 'assets/js/mdi-icons.js', __FILE__ );
+        return $plugin_array;
+    }
+
+    // Register new button in the editor
+    public function add_tinymce_buttons( $buttons ) {
+        array_push( $buttons, 'mdi_icons' );
+        return $buttons;
     }
 }
 

@@ -10,7 +10,7 @@ Requires at least: 3.0
 
 Tested up to: 4.2.1
 
-Stable tag: 0.0.2
+Stable tag: 0.0.3
 
 License: GPLv3 or later
 
@@ -66,6 +66,10 @@ Initial release
 __Version 0.0.2__
 
 Update to Material Design Icons 1.0.62
+
+__Version 0.0.3__
+
+Added TinyMCE button with size, color, and icon picker
 
 
 ##Author
