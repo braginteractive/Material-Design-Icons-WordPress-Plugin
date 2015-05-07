@@ -38,13 +38,19 @@ __Shortcode__
 
 Don't want to worry about HTML tags?  You can use a shortcode in your posts, pages and even widgets to display a Material Design icon.
 
-The shortcode to use is `[icon name=name-of-icon]`, where name=X is the class of the icon you would like to use.
+The shortcode to use is `[mdi-icon name=X]`, where name=X is the class of the icon you would like to use.
 
 **Examples**
 
 Amazon icon
 
 `[mdi-icon name="amazon"]`
+
+With v0.0.3 you can now add size and color.
+
+`[mdi-icon name="amazon" color="red" size="2x"]`
+
+You can add a hex color value and the include size values are: lg, 2x, 3x, 4x, 5x, 6x, 7x, 8x, 9x, 10x
 
 ##Installation
 
