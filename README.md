@@ -50,7 +50,7 @@ With v0.0.3 you can now add size and color.
 
 `[mdi-icon name="amazon" color="red" size="2x"]`
 
-You can add a hex color value and the include size values are: lg, 2x, 3x, 4x, 5x, 6x, 7x, 8x, 9x, 10x
+Hex values will work for the color option and the include size values are: lg, 2x, 3x, 4x, 5x, 6x, 7x, 8x, 9x, 10x
 
 ##Installation
 
