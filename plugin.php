@@ -3,7 +3,7 @@
 Plugin Name: Material Design Icons
 Plugin URI: http://braginteractive.com
 Description: Use the Material Design icon set within WordPress. Icons can be inserted using either HTML or a shortcode.
-Version: 0.0.3
+Version: 0.0.6
 Author: Brad Williams
 Author URI: http://braginteractive.com
 Author Email: info@braginteractive.com
@@ -34,7 +34,7 @@ License:
 
 class MaterialDesignIcons {
     private static $instance;
-    const VERSION = '0.0.3';
+    const VERSION = '0.0.6';
 
     private static function has_instance() {
         return isset(self::$instance) && self::$instance != null;
@@ -79,7 +79,7 @@ class MaterialDesignIcons {
 
     public function register_plugin_styles() {
         global $wp_styles;
-        wp_enqueue_style('material-design-icon-styles', plugins_url('bower_components/mdi/css/materialdesignicons.min.css', __FILE__), array(), self::VERSION, 'all');
+        wp_enqueue_style('material-design-icon-styles', plugins_url('node_modules/@mdi/font/css/materialdesignicons.min.css', __FILE__), array(), self::VERSION, 'all');
         wp_enqueue_style('material-design-icon-styles-admin', plugins_url('css/admin-styles.css', __FILE__), array(), self::VERSION, 'all');
         wp_enqueue_style('material-design-icon-styles-size', plugins_url('css/size-styles.css', __FILE__), array(), self::VERSION, 'all');
     }

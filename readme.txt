@@ -1,10 +1,10 @@
 === Material Design Icons ===
-Contributors: braginteractive
-Donate link: http://example.com/
+Contributors: braginteractive, chrisanben
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=54JCLD3GUCY68
 Tags: icons, material design, font icon, UI, icon font, material
 Requires at least: 3.0.1
-Tested up to: 4.2.1
-Stable tag: 0.0.3
+Tested up to: 6.3
+Stable tag: 0.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,10 +22,10 @@ Enables 1000+ Material Design icons within WordPress pages and posts. Icons can 
 Material Design Icons can be used in 3 different ways: shortcode, HTML, and TinyMCE
 
 = 1. Shortcode =
-`[icon name="material-ul" size="2x" color="red"]`
+`[mdi-icon name="material-ul" size="2x" color="red"]`
 
 You can also use hex values for color:
-`[icon name="material-ul" size="2x" color="#000000"]`
+`[mdi-icon name="material-ul" size="2x" color="#000000"]`
 
 You can read more about shortcode usage on [Github](https://github.com/braginteractive/Material-Design-Icons-WordPress-Plugin)
 
@@ -80,6 +80,7 @@ Hex values will work for the color option and the include size values are: lg, 2
 __Author__
 
 *   [Brad Williams](http://braginteractive.com)
+*   [Christoffer Cabello] (https://chrisanben.com)
 
 == Frequently Asked Questions ==
 
@@ -98,11 +99,35 @@ Yes
 
 == Upgrade Notice ==
 
-= 0.0.3 =
+= 0.0.6 =
 
-* Initial release
+* tested on 6.3
+* replaced bower
+* update MDI to v7.2.96
+
+= 0.0.5 =
+
+* tested on 4.3
+
+= 0.0.4 =
+
+* update MDI to 1.1.70
+* fix icon font sizes
+
+= 0.0.3.2 =
+
+* minor bugfix
 
 == Changelog ==
+
+= 0.0.5 =
+
+* tested on 4.3
+
+= 0.0.4 =
+
+* update MDI to 1.1.70
+* fix icon font sizes
 
 = 0.0.3 =
 
